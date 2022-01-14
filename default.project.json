@@ -1,9 +1,9 @@
 {
-	"name": "Llama",
+	"name": "llama",
 	"tree": {
 		"$path": "src",
 		"t": {
-			"$path": "modules/t/lib"
+			"$path": "Packages/t.lua"
 		}
 	}
 }
