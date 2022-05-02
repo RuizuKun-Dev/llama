@@ -4,15 +4,15 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function toSet(list)
-    assert(validate(list))
+	assert(validate(list))
 
-    local set = {}
+	local set = {}
 
-    for _, v in ipairs(list)do
-        set[v] = true
-    end
+	for _, v in ipairs(list) do
+		set[v] = true
+	end
 
-    return set
+	return set
 end
 
 return toSet

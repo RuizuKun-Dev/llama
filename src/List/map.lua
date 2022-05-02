@@ -4,22 +4,22 @@ local t = require(Llama.t)
 local validate = t.tuple(t.table, t.callback)
 
 local function map(list, mapper)
-    assert(validate(list, mapper))
+	assert(validate(list, mapper))
 
-    local new = {}
-    local index = 1
+	local new = {}
+	local index = 1
 
-    for i, v in ipairs(list)do
-        local value = mapper(v, i)
+	for i, v in ipairs(list) do
+		local value = mapper(v, i)
 
-        if value ~= nil then
-            new[index] = value
+		if value ~= nil then
+			new[index] = value
 
-            index += 1
-        end
-    end
+			index += 1
+		end
+	end
 
-    return new
+	return new
 end
 
 return map

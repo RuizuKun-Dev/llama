@@ -4,15 +4,15 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function flip(dictionary)
-    assert(validate(dictionary))
+	assert(validate(dictionary))
 
-    local new = {}
+	local new = {}
 
-    for key, value in pairs(dictionary)do
-        new[value] = key
-    end
+	for key, value in pairs(dictionary) do
+		new[value] = key
+	end
 
-    return new
+	return new
 end
 
 return flip

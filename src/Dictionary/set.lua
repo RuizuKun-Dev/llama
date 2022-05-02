@@ -5,13 +5,13 @@ local t = require(Llama.t)
 local validate = t.tuple(t.table, t.any)
 
 local function set(dictionary, key, value)
-    assert(validate(dictionary, key))
+	assert(validate(dictionary, key))
 
-    local new = copy(dictionary)
+	local new = copy(dictionary)
 
-    new[key] = value
+	new[key] = value
 
-    return new
+	return new
 end
 
 return set

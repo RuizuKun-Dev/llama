@@ -4,15 +4,15 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function copy(list)
-    assert(validate(list))
+	assert(validate(list))
 
-    local new = {}
+	local new = {}
 
-    for i, v in ipairs(list)do
-        new[i] = v
-    end
+	for i, v in ipairs(list) do
+		new[i] = v
+	end
 
-    return new
+	return new
 end
 
 return copy

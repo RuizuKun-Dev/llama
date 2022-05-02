@@ -5,9 +5,9 @@ local t = require(Llama.t)
 local validate = t.tuple(t.table, t.table)
 
 local function isSuperset(superset, subset)
-    assert(validate(superset, subset))
+	assert(validate(superset, subset))
 
-    return isSubset(subset, superset)
+	return isSubset(subset, superset)
 end
 
 return isSuperset

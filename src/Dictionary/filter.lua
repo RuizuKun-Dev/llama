@@ -4,17 +4,17 @@ local t = require(Llama.t)
 local validate = t.tuple(t.table, t.callback)
 
 local function filter(dictionary, filterer)
-    assert(validate(dictionary, filterer))
+	assert(validate(dictionary, filterer))
 
-    local new = {}
+	local new = {}
 
-    for key, value in pairs(dictionary)do
-        if filterer(value, key) then
-            new[key] = value
-        end
-    end
+	for key, value in pairs(dictionary) do
+		if filterer(value, key) then
+			new[key] = value
+		end
+	end
 
-    return new
+	return new
 end
 
 return filter

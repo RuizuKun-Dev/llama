@@ -4,19 +4,19 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function copyDeep(list)
-    assert(validate(list))
+	assert(validate(list))
 
-    local new = {}
+	local new = {}
 
-    for i, v in ipairs(list)do
-        if type(v) == 'table' then
-            new[i] = copyDeep(v)
-        else
-            new[i] = v
-        end
-    end
+	for i, v in ipairs(list) do
+		if type(v) == "table" then
+			new[i] = copyDeep(v)
+		else
+			new[i] = v
+		end
+	end
 
-    return new
+	return new
 end
 
 return copyDeep

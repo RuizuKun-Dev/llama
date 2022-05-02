@@ -5,13 +5,13 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function removeKey(dictionary, key)
-    assert(validate(dictionary))
+	assert(validate(dictionary))
 
-    local new = copy(dictionary)
+	local new = copy(dictionary)
 
-    new[key] = nil
+	new[key] = nil
 
-    return new
+	return new
 end
 
 return removeKey

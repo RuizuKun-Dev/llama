@@ -4,15 +4,15 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function copy(dictionary)
-    assert(validate(dictionary))
+	assert(validate(dictionary))
 
-    local new = {}
+	local new = {}
 
-    for key, value in pairs(dictionary)do
-        new[key] = value
-    end
+	for key, value in pairs(dictionary) do
+		new[key] = value
+	end
 
-    return new
+	return new
 end
 
 return copy

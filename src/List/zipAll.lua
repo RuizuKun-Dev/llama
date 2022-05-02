@@ -5,36 +5,36 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function zipAll(...)
-    local new = {}
-    local argCount = select('#', ...)
-    local maxLen = 0
+	local new = {}
+	local argCount = select("#", ...)
+	local maxLen = 0
 
-    for i=1, argCount do
-        local list = select(i, ...)
+	for i = 1, argCount do
+		local list = select(i, ...)
 
-        assert(validate(list))
+		assert(validate(list))
 
-        local len = #list
+		local len = #list
 
-        if len > maxLen then
-            maxLen = len
-        end
-    end
-    for i=1, maxLen do
-        new[i] = {}
+		if len > maxLen then
+			maxLen = len
+		end
+	end
+	for i = 1, maxLen do
+		new[i] = {}
 
-        for j=1, argCount do
-            local value = select(j, ...)[i]
+		for j = 1, argCount do
+			local value = select(j, ...)[i]
 
-            if value == nil then
-                new[i][j] = None
-            else
-                new[i][j] = select(j, ...)[i]
-            end
-        end
-    end
+			if value == nil then
+				new[i][j] = None
+			else
+				new[i][j] = select(j, ...)[i]
+			end
+		end
+	end
 
-    return new
+	return new
 end
 
 return zipAll

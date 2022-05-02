@@ -4,19 +4,19 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function subtract(set, ...)
-    assert(validate(set))
+	assert(validate(set))
 
-    local new = {}
+	local new = {}
 
-    for key, _ in pairs(set)do
-        new[key] = true
-    end
+	for key, _ in pairs(set) do
+		new[key] = true
+	end
 
-    for i=1, select('#', ...)do
-        new[select(i, ...)] = nil
-    end
+	for i = 1, select("#", ...) do
+		new[select(i, ...)] = nil
+	end
 
-    return new
+	return new
 end
 
 return subtract

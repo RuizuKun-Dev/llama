@@ -4,16 +4,16 @@ local t = require(Llama.t)
 local validate = t.table
 
 local function reverse(list)
-    assert(validate(list))
+	assert(validate(list))
 
-    local new = {}
-    local back = #list + 1
+	local new = {}
+	local back = #list + 1
 
-    for i, _ in ipairs(list)do
-        new[i] = list[back - i]
-    end
+	for i, _ in ipairs(list) do
+		new[i] = list[back - i]
+	end
 
-    return new
+	return new
 end
 
 return reverse

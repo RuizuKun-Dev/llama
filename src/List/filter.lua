@@ -4,20 +4,20 @@ local t = require(Llama.t)
 local validate = t.tuple(t.table, t.callback)
 
 local function filter(list, filterer)
-    assert(validate(list, filterer))
+	assert(validate(list, filterer))
 
-    local new = {}
-    local index = 1
+	local new = {}
+	local index = 1
 
-    for i, v in ipairs(list)do
-        if filterer(v, i) then
-            new[index] = v
+	for i, v in ipairs(list) do
+		if filterer(v, i) then
+			new[index] = v
 
-            index += 1
-        end
-    end
+			index += 1
+		end
+	end
 
-    return new
+	return new
 end
 
 return filter
