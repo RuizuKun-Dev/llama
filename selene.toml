@@ -1,4 +1,4 @@
 std = "roblox+testez"
 
-[config]
-unused_variable = { allow_unused_self = true }
+[rules]
+parenthese_conditions = "allow"
