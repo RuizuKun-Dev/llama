@@ -1,19 +1,17 @@
 local List = script.Parent
 local copy = require(List.copy)
-
 local Llama = List.Parent
 local t = require(Llama.t)
-
 local validate = t.tuple(t.table, t.optional(t.callback))
 
 local function sort(list, comparator)
-	assert(validate(list, comparator))
-	
-	local new = copy(list)
+    assert(validate(list, comparator))
 
-	table.sort(new, comparator)
+    local new = copy(list)
 
-	return new
+    table.sort(new, comparator)
+
+    return new
 end
 
 return sort

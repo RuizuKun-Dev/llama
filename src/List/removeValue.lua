@@ -1,24 +1,23 @@
 local List = script.Parent
-
 local Llama = List.Parent
 local t = require(Llama.t)
-
 local validate = t.table
 
 local function removeValue(list, value)
-	assert(validate(list))
+    assert(validate(list))
 
-	local new = {}
-	local index = 1
+    local new = {}
+    local index = 1
 
-	for _, v in ipairs(list) do
-		if v ~= value then
-			new[index] = v
-			index += 1
-		end
-	end
+    for _, v in ipairs(list)do
+        if v ~= value then
+            new[index] = v
 
-	return new
+            index += 1
+        end
+    end
+
+    return new
 end
 
 return removeValue

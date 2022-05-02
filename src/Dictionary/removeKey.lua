@@ -1,19 +1,17 @@
 local Dictionary = script.Parent
 local copy = require(Dictionary.copy)
-
 local Llama = Dictionary.Parent
 local t = require(Llama.t)
-
 local validate = t.table
 
 local function removeKey(dictionary, key)
-	assert(validate(dictionary))
-	
-	local new = copy(dictionary)
+    assert(validate(dictionary))
 
-	new[key] = nil
+    local new = copy(dictionary)
 
-	return new
+    new[key] = nil
+
+    return new
 end
 
 return removeKey
