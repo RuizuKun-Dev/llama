@@ -1,6 +1,6 @@
 [package]
-name = "ruizukun-dev/matter"
-description = "A modern reactive UI library, built specifically for Roblox and Luau"
+name = "ruizukun-dev/llama"
+description = "A Lua Library for Immutable Data"
 license = "MIT"
 authors = ["freddylist"]
 version = "1.0.0"
